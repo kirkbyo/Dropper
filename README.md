@@ -1,5 +1,5 @@
 # Dropper
-
+<p align="center"><img src="https://raw.githubusercontent.com/kirkbyo/Dropper/master/Pod/Assets/Logo.png" alt="Outflow app icon"/></p>
 [![Version](https://img.shields.io/cocoapods/v/Dropper.svg?style=flat)](http://cocoapods.org/pods/Dropper)
 [![License](https://img.shields.io/cocoapods/l/Dropper.svg?style=flat)](http://cocoapods.org/pods/Dropper)
 [![Platform](https://img.shields.io/cocoapods/p/Dropper.svg?style=flat)](http://cocoapods.org/pods/Dropper)
