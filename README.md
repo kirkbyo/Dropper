@@ -1,6 +1,11 @@
 # Dropper
 Dropper is a simple Dropdown menu for iOS. Built with customizability in mind and is flexible on how it can be used. Also, it is easy to setup and use in your projects. If you are looking for some complex dropdown menu, this is not for you. This was more built to be used as an accessory to a view. For example being able to change your currency in a shopping cart app. 
 
+![Basic demo of how Dropper looks](https://raw.githubusercontent.com/kirkbyo/Dropper/master/Pod/Assets/White-DropdownBasic.mov.gif)
+![Outflow Demo for how Dropper is used in the app](https://raw.githubusercontent.com/kirkbyo/Dropper/master/Pod/Assets/DropperOutflowDemo.mov.gif)
+
+Left demo of a basic Dropper menu. Right is how Dropper is used in [Outflow](http://outflowapp.com/).
+
 ## Installation
 
 Dropper is available through [CocoaPods](http://cocoapods.org). To install
