@@ -88,6 +88,7 @@ public class Dropper: UIView {
         }
     }
     
+    /// Theme of dropdown menu (Defaults to White theme)
     public var theme: Themes = .White {
         didSet {
             switch theme {
