@@ -65,14 +65,49 @@ class ViewController: UIViewController {
 ## Documentation
 
 #### Show
-
+Shows the Dropdown Menu
 - `show(options: Alignment, button: UIButton)`
   - options *Dropper.Alignment*: Position of the dropdown corresponding of the button (Left, Center, Right)
   - button *UIButton*: Button that button will be position relative too
+Shows the Dropdown menu with a fade animation
 - `showWithAnimation(time: NSTimeInterval, options: Alignment, button: UIButton)`
   - time *NSTimeInterval*: Time taken for the fade animation
   - options *Dropper.Alignment*: Position of the dropdown corresponding of the button (Left, Center, Right)
   - button *UIButton*: Button that button will be position relative too
+
+#### Hide
+Hides the Dropdown Menu
+- `hide()`
+Hides the Dropdown menu with an fade out animation
+- `hideWithAnimation(time: NSTimeInterval)`
+    - time *NSTimeInterval*: Time taken for the fade out animation
+
+#### Properties 
+- `trimCorners` *Bool*: Automaticly applies border radius of 10 to Dropdown (Defaults to False)
+- `defaultAnimationTime` *NSTimeInterval*: The default time for animations to take (Defaults to 0.1)
+- `delegate` *DropperDelegate*: Delegate property, must be initialized for the functions to be called
+    - `DropperSelectedRow`: Called everytime a Dropper row is selected
+- `status` *Status (Enum)*: The current state of the view
+- `spacing` *CGFloat*: The distance from the button to the Dropper
+- `maxHeight` *CGFloat*: The maximum possible height of the Dropper
+- `cellBackgroundColor` *UIColor*: Sets the cell background color (Defaults to theme color if not set)
+- `cellColor` *UIColor*: Sets the cell tint color and text color (Defaults to theme color if not set)
+- `cellTextSize` *CGFloat*: Sets the size of the text to provided value (Defaults to UILabel Font Size)
+- `TableMenu` *UITableView*: Table View that the Dropper is built on
+- `items` *[String]*: The items to be dispalyed in the tableview
+- `height` *CGFloat*: Height of the Dropdown
+- `width` *CGFloat*: Width of the Dropdown
+- `cornerRadius` *CGFloat*: Corner Radius of the Dropdown
+- `theme` *Themes (Enum)*: Theme of dropdown menu (Defaults to White theme)
+    - `.White`: Black text color, White background Color and black border color
+    - `.Black(UIColor)`: White Text, Dark background color, you can also specify your own color, or use the default by passing **nil** to the enum case
+```Swift
+dropper.theme = Dropper.Themes.Black(nil) // Uses default dark color
+// OR
+dropper.theme = Dropper.Themes.Black(UIColor.blackColor()) // Uses default dark color
+```
+- `border` *(width: CGFloat, color: UIColor)*: Specify the border width and the color of the Dropper
+- `refresh()`: Refresh the Dropper. For specifically calling .reloadData() on the Table View
 
 ## License
 
