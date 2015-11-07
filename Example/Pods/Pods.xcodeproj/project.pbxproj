@@ -16,7 +16,15 @@
 		A026127964D7477E7B7BC1A5933642DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0744942E57A81745720798DFADB3C1E9 /* Foundation.framework */; };
 		AFE15E405267723F6FFB7B7B4BA73617 /* Pods-Dropper_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A02277345A7C3691E4B4124AC016D719 /* Pods-Dropper_Example-dummy.m */; };
 		B7D8485163CB87C045C1262EBB0005C6 /* Dropper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA82F5338DC183427FB15633A1F6A43 /* Dropper-dummy.m */; };
-		BA412380A8C894ADCD2582382694506B /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD260DA487ED7244761AC3834338FCD /* ReplaceMe.swift */; };
+		D9739A671BED91740008DF41 /* Dropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9739A641BED91740008DF41 /* Dropper.swift */; };
+		D9739A681BED91740008DF41 /* Dropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9739A641BED91740008DF41 /* Dropper.swift */; };
+		D9739A691BED91740008DF41 /* Dropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9739A641BED91740008DF41 /* Dropper.swift */; };
+		D9739A6A1BED91740008DF41 /* DropperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9739A651BED91740008DF41 /* DropperCell.swift */; };
+		D9739A6B1BED91740008DF41 /* DropperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9739A651BED91740008DF41 /* DropperCell.swift */; };
+		D9739A6C1BED91740008DF41 /* DropperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9739A651BED91740008DF41 /* DropperCell.swift */; };
+		D9739A6D1BED91740008DF41 /* DropperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9739A661BED91740008DF41 /* DropperExtensions.swift */; };
+		D9739A6E1BED91740008DF41 /* DropperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9739A661BED91740008DF41 /* DropperExtensions.swift */; };
+		D9739A6F1BED91740008DF41 /* DropperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9739A661BED91740008DF41 /* DropperExtensions.swift */; };
 		E4A0D0D735A5EC0369773030208E3409 /* Pods-Dropper_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE817FB0C369C1BE0BBDF4A2F356CC4 /* Pods-Dropper_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -60,7 +68,6 @@
 		62CFE52A5924FAE65DBC55952F7EF956 /* Pods-Dropper_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Dropper_Tests-dummy.m"; sourceTree = "<group>"; };
 		6B0D2BE7557890D8864C37700EA581D7 /* Pods-Dropper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Dropper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7865C143231AC5C21B2CC837029452A6 /* Dropper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Dropper.xcconfig; sourceTree = "<group>"; };
-		7DD260DA487ED7244761AC3834338FCD /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		826620FF2DE4A2E7D5ADB050E081F657 /* Pods-Dropper_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Dropper_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8785FFB57E4CCFB57E821B734BF6FC7B /* Pods_Dropper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dropper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		955B312E0809695B938A19A587E08D4E /* Pods_Dropper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dropper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +82,9 @@
 		CC368D50E49C5605C9AF33390894EBBD /* Dropper-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Dropper-Private.xcconfig"; sourceTree = "<group>"; };
 		D199913041B1CCCC1402C93D602A5C8F /* Pods-Dropper_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Dropper_Example.modulemap"; sourceTree = "<group>"; };
 		D37311489779C822BD2C49C288F7890E /* Pods-Dropper_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Dropper_Tests-umbrella.h"; sourceTree = "<group>"; };
+		D9739A641BED91740008DF41 /* Dropper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dropper.swift; sourceTree = "<group>"; };
+		D9739A651BED91740008DF41 /* DropperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropperCell.swift; sourceTree = "<group>"; };
+		D9739A661BED91740008DF41 /* DropperExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropperExtensions.swift; sourceTree = "<group>"; };
 		D9B46365DD7585E8531F2CECA616C0F8 /* Dropper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Dropper-prefix.pch"; sourceTree = "<group>"; };
 		DA561E98D63340E2281FCB195B730DC9 /* Pods-Dropper_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Dropper_Example-resources.sh"; sourceTree = "<group>"; };
 		F8F9B93587BECC3E9A7A85A3E049B33D /* Dropper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dropper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +174,9 @@
 		5D4B23DA4468C92D1EAA3A02777CBB6C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7DD260DA487ED7244761AC3834338FCD /* ReplaceMe.swift */,
+				D9739A641BED91740008DF41 /* Dropper.swift */,
+				D9739A651BED91740008DF41 /* DropperCell.swift */,
+				D9739A661BED91740008DF41 /* DropperExtensions.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -356,7 +368,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -402,6 +414,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9739A6B1BED91740008DF41 /* DropperCell.swift in Sources */,
+				D9739A681BED91740008DF41 /* Dropper.swift in Sources */,
+				D9739A6E1BED91740008DF41 /* DropperExtensions.swift in Sources */,
 				AFE15E405267723F6FFB7B7B4BA73617 /* Pods-Dropper_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +425,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9739A6C1BED91740008DF41 /* DropperCell.swift in Sources */,
+				D9739A691BED91740008DF41 /* Dropper.swift in Sources */,
+				D9739A6F1BED91740008DF41 /* DropperExtensions.swift in Sources */,
 				3475F40C2665935448B1D2ED060532F6 /* Pods-Dropper_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,8 +436,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9739A6A1BED91740008DF41 /* DropperCell.swift in Sources */,
+				D9739A671BED91740008DF41 /* Dropper.swift in Sources */,
+				D9739A6D1BED91740008DF41 /* DropperExtensions.swift in Sources */,
 				B7D8485163CB87C045C1262EBB0005C6 /* Dropper-dummy.m in Sources */,
-				BA412380A8C894ADCD2582382694506B /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ABCFEBF2698FC16623F64C38D26819C7 /* Pods-Dropper_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -533,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CC368D50E49C5605C9AF33390894EBBD /* Dropper-Private.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.1.0;
 				DEFINES_MODULE = YES;
@@ -560,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 516FA4EA2D3331399EAA2BFFD6BA6298 /* Pods-Dropper_Tests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -628,6 +651,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CC368D50E49C5605C9AF33390894EBBD /* Dropper-Private.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 0.1.0;
 				DEFINES_MODULE = YES;
@@ -668,6 +692,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B0D2BE7557890D8864C37700EA581D7 /* Pods-Dropper_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -698,6 +723,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB5D80FD75E0B4C459B72AAE475C3438 /* Pods-Dropper_Tests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
