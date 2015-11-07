@@ -1,0 +1,6 @@
+framework module Pods_Dropper_Tests {
+  umbrella header "Pods-Dropper_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

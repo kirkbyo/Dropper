@@ -1,0 +1,778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3475F40C2665935448B1D2ED060532F6 /* Pods-Dropper_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CFE52A5924FAE65DBC55952F7EF956 /* Pods-Dropper_Tests-dummy.m */; };
+		3F0427919408203F6D0B82C0209FB71D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0744942E57A81745720798DFADB3C1E9 /* Foundation.framework */; };
+		3FF6ED0C4466704500CB7E9941EF80A7 /* Dropper.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9DEEA991896E43610D5BDF3402151745 /* Dropper.bundle */; };
+		445BE7D33C43C8BC42ADEDFA75956B1C /* Pods-Dropper_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D37311489779C822BD2C49C288F7890E /* Pods-Dropper_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4683410F38783A55C361F74075B84032 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0744942E57A81745720798DFADB3C1E9 /* Foundation.framework */; };
+		8F46B9EDA2ED7E5B5CDEB4EA86AF0014 /* Dropper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B6F223AB2558EFC4B6FCD4611B85CE27 /* Dropper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A026127964D7477E7B7BC1A5933642DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0744942E57A81745720798DFADB3C1E9 /* Foundation.framework */; };
+		AFE15E405267723F6FFB7B7B4BA73617 /* Pods-Dropper_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A02277345A7C3691E4B4124AC016D719 /* Pods-Dropper_Example-dummy.m */; };
+		B7D8485163CB87C045C1262EBB0005C6 /* Dropper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA82F5338DC183427FB15633A1F6A43 /* Dropper-dummy.m */; };
+		BA412380A8C894ADCD2582382694506B /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD260DA487ED7244761AC3834338FCD /* ReplaceMe.swift */; };
+		E4A0D0D735A5EC0369773030208E3409 /* Pods-Dropper_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE817FB0C369C1BE0BBDF4A2F356CC4 /* Pods-Dropper_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3CC7146BB93A9913A17E05C35C299EF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6A5DF809507D35CDD5BA5F4B7AF4EA0;
+			remoteInfo = Dropper;
+		};
+		B569FB1205280FDA0E53FC759BACCF3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6A5DF809507D35CDD5BA5F4B7AF4EA0;
+			remoteInfo = Dropper;
+		};
+		D6B9DD4B0880A6ABE88E079C3718E3F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A6C833AB9B6769472605035B6C5C071;
+			remoteInfo = "Dropper-Dropper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0744942E57A81745720798DFADB3C1E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0FA82F5338DC183427FB15633A1F6A43 /* Dropper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Dropper-dummy.m"; sourceTree = "<group>"; };
+		3052B78CA3F55AD106A7A625DF3DC4F3 /* Pods-Dropper_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Dropper_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		366995CF0872293AF36E8A556B74891E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A073D969DDC2B43A45062F20C9E671D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C6A5772B1262BBD34F688ED928DBA1B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FB5368A8ECDD77135681BB17263F784 /* Pods-Dropper_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Dropper_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		46C93A6292319EF20AD89090D45E1867 /* Pods-Dropper_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Dropper_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		47F77A5A3608BBCD9A4C24A62CF32CD4 /* Pods-Dropper_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Dropper_Example-frameworks.sh"; sourceTree = "<group>"; };
+		516FA4EA2D3331399EAA2BFFD6BA6298 /* Pods-Dropper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Dropper_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5376617430BE3CBD68E7A2AD03D22407 /* Pods-Dropper_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Dropper_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		62063B89A4D6EA249B878B270D6C078F /* Pods-Dropper_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Dropper_Tests-resources.sh"; sourceTree = "<group>"; };
+		62CFE52A5924FAE65DBC55952F7EF956 /* Pods-Dropper_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Dropper_Tests-dummy.m"; sourceTree = "<group>"; };
+		6B0D2BE7557890D8864C37700EA581D7 /* Pods-Dropper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Dropper_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		7865C143231AC5C21B2CC837029452A6 /* Dropper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Dropper.xcconfig; sourceTree = "<group>"; };
+		7DD260DA487ED7244761AC3834338FCD /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		826620FF2DE4A2E7D5ADB050E081F657 /* Pods-Dropper_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Dropper_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8785FFB57E4CCFB57E821B734BF6FC7B /* Pods_Dropper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dropper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		955B312E0809695B938A19A587E08D4E /* Pods_Dropper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dropper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C3A9C0239C2B3DAF90519C39303DD69 /* Pods-Dropper_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Dropper_Tests.modulemap"; sourceTree = "<group>"; };
+		9CE817FB0C369C1BE0BBDF4A2F356CC4 /* Pods-Dropper_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Dropper_Example-umbrella.h"; sourceTree = "<group>"; };
+		9DEEA991896E43610D5BDF3402151745 /* Dropper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dropper.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02277345A7C3691E4B4124AC016D719 /* Pods-Dropper_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Dropper_Example-dummy.m"; sourceTree = "<group>"; };
+		ABCFEBF2698FC16623F64C38D26819C7 /* Pods-Dropper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Dropper_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B6F223AB2558EFC4B6FCD4611B85CE27 /* Dropper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Dropper-umbrella.h"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BD38553A33492B2780C03AA071E4EE9E /* Dropper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Dropper.modulemap; sourceTree = "<group>"; };
+		CC368D50E49C5605C9AF33390894EBBD /* Dropper-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Dropper-Private.xcconfig"; sourceTree = "<group>"; };
+		D199913041B1CCCC1402C93D602A5C8F /* Pods-Dropper_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Dropper_Example.modulemap"; sourceTree = "<group>"; };
+		D37311489779C822BD2C49C288F7890E /* Pods-Dropper_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Dropper_Tests-umbrella.h"; sourceTree = "<group>"; };
+		D9B46365DD7585E8531F2CECA616C0F8 /* Dropper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Dropper-prefix.pch"; sourceTree = "<group>"; };
+		DA561E98D63340E2281FCB195B730DC9 /* Pods-Dropper_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Dropper_Example-resources.sh"; sourceTree = "<group>"; };
+		F8F9B93587BECC3E9A7A85A3E049B33D /* Dropper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dropper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB5D80FD75E0B4C459B72AAE475C3438 /* Pods-Dropper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Dropper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		600E8D2C5E0F5531A6ABCD1AF60BF72A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0427919408203F6D0B82C0209FB71D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6092B193D55CF582E13735869A3B3008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A026127964D7477E7B7BC1A5933642DE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FBE2E22D57A9A7F174AA33C9D940553 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4683410F38783A55C361F74075B84032 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		897E28AA2D4246EAD4D570CF8BA1A96B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BFF956ED3406AAABB6B2BB3CAE2454B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B92122ADE92D920E57026343E340F89E /* Pods-Dropper_Example */,
+				245F52923C0322E28EAC60D26F9BDBC4 /* Pods-Dropper_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		245F52923C0322E28EAC60D26F9BDBC4 /* Pods-Dropper_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3C6A5772B1262BBD34F688ED928DBA1B /* Info.plist */,
+				9C3A9C0239C2B3DAF90519C39303DD69 /* Pods-Dropper_Tests.modulemap */,
+				46C93A6292319EF20AD89090D45E1867 /* Pods-Dropper_Tests-acknowledgements.markdown */,
+				826620FF2DE4A2E7D5ADB050E081F657 /* Pods-Dropper_Tests-acknowledgements.plist */,
+				62CFE52A5924FAE65DBC55952F7EF956 /* Pods-Dropper_Tests-dummy.m */,
+				3FB5368A8ECDD77135681BB17263F784 /* Pods-Dropper_Tests-frameworks.sh */,
+				62063B89A4D6EA249B878B270D6C078F /* Pods-Dropper_Tests-resources.sh */,
+				D37311489779C822BD2C49C288F7890E /* Pods-Dropper_Tests-umbrella.h */,
+				FB5D80FD75E0B4C459B72AAE475C3438 /* Pods-Dropper_Tests.debug.xcconfig */,
+				516FA4EA2D3331399EAA2BFFD6BA6298 /* Pods-Dropper_Tests.release.xcconfig */,
+			);
+			name = "Pods-Dropper_Tests";
+			path = "Target Support Files/Pods-Dropper_Tests";
+			sourceTree = "<group>";
+		};
+		48DC37334F0DAB06AFEBA596FCB7B662 /* Dropper */ = {
+			isa = PBXGroup;
+			children = (
+				E09BA887C99697354D5BDFEAF817894A /* Pod */,
+				BC36859E36DDFC266F4AEA14BF4BDD66 /* Support Files */,
+			);
+			name = Dropper;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0744942E57A81745720798DFADB3C1E9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5D4B23DA4468C92D1EAA3A02777CBB6C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7DD260DA487ED7244761AC3834338FCD /* ReplaceMe.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				92359C4E0F127C441E97622656DF6190 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				1BFF956ED3406AAABB6B2BB3CAE2454B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		92359C4E0F127C441E97622656DF6190 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48DC37334F0DAB06AFEBA596FCB7B662 /* Dropper */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		B92122ADE92D920E57026343E340F89E /* Pods-Dropper_Example */ = {
+			isa = PBXGroup;
+			children = (
+				3A073D969DDC2B43A45062F20C9E671D /* Info.plist */,
+				D199913041B1CCCC1402C93D602A5C8F /* Pods-Dropper_Example.modulemap */,
+				5376617430BE3CBD68E7A2AD03D22407 /* Pods-Dropper_Example-acknowledgements.markdown */,
+				3052B78CA3F55AD106A7A625DF3DC4F3 /* Pods-Dropper_Example-acknowledgements.plist */,
+				A02277345A7C3691E4B4124AC016D719 /* Pods-Dropper_Example-dummy.m */,
+				47F77A5A3608BBCD9A4C24A62CF32CD4 /* Pods-Dropper_Example-frameworks.sh */,
+				DA561E98D63340E2281FCB195B730DC9 /* Pods-Dropper_Example-resources.sh */,
+				9CE817FB0C369C1BE0BBDF4A2F356CC4 /* Pods-Dropper_Example-umbrella.h */,
+				6B0D2BE7557890D8864C37700EA581D7 /* Pods-Dropper_Example.debug.xcconfig */,
+				ABCFEBF2698FC16623F64C38D26819C7 /* Pods-Dropper_Example.release.xcconfig */,
+			);
+			name = "Pods-Dropper_Example";
+			path = "Target Support Files/Pods-Dropper_Example";
+			sourceTree = "<group>";
+		};
+		BC36859E36DDFC266F4AEA14BF4BDD66 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD38553A33492B2780C03AA071E4EE9E /* Dropper.modulemap */,
+				7865C143231AC5C21B2CC837029452A6 /* Dropper.xcconfig */,
+				CC368D50E49C5605C9AF33390894EBBD /* Dropper-Private.xcconfig */,
+				0FA82F5338DC183427FB15633A1F6A43 /* Dropper-dummy.m */,
+				D9B46365DD7585E8531F2CECA616C0F8 /* Dropper-prefix.pch */,
+				B6F223AB2558EFC4B6FCD4611B85CE27 /* Dropper-umbrella.h */,
+				366995CF0872293AF36E8A556B74891E /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Dropper";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DEEA991896E43610D5BDF3402151745 /* Dropper.bundle */,
+				F8F9B93587BECC3E9A7A85A3E049B33D /* Dropper.framework */,
+				955B312E0809695B938A19A587E08D4E /* Pods_Dropper_Example.framework */,
+				8785FFB57E4CCFB57E821B734BF6FC7B /* Pods_Dropper_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E09BA887C99697354D5BDFEAF817894A /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				5D4B23DA4468C92D1EAA3A02777CBB6C /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1842901A61D920236C7919E63C7C4378 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4A0D0D735A5EC0369773030208E3409 /* Pods-Dropper_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26E7CE2880401A6044270F97EA472A93 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F46B9EDA2ED7E5B5CDEB4EA86AF0014 /* Dropper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CC309AA4F2351DAA43C3349CA92B6DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				445BE7D33C43C8BC42ADEDFA75956B1C /* Pods-Dropper_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5A6C833AB9B6769472605035B6C5C071 /* Dropper-Dropper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3CF13FA8CEEC1BDD751AD94EE372FCA /* Build configuration list for PBXNativeTarget "Dropper-Dropper" */;
+			buildPhases = (
+				EF485B7DA2402760F8F861F2A67EF20C /* Sources */,
+				897E28AA2D4246EAD4D570CF8BA1A96B /* Frameworks */,
+				01BA96B0D2C4AD47566FEFA041ED6CE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dropper-Dropper";
+			productName = "Dropper-Dropper";
+			productReference = 9DEEA991896E43610D5BDF3402151745 /* Dropper.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		764B119200CA6DAC81C1ECFDBE48783B /* Pods-Dropper_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30AFC2A744CDD6EC8E784FFC618F0565 /* Build configuration list for PBXNativeTarget "Pods-Dropper_Tests" */;
+			buildPhases = (
+				38F562D66CCF2BEC46C20EA795DE5A1D /* Sources */,
+				7FBE2E22D57A9A7F174AA33C9D940553 /* Frameworks */,
+				3CC309AA4F2351DAA43C3349CA92B6DE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2746B923B9C3F9BC721430F6E7CFB596 /* PBXTargetDependency */,
+			);
+			name = "Pods-Dropper_Tests";
+			productName = "Pods-Dropper_Tests";
+			productReference = 8785FFB57E4CCFB57E821B734BF6FC7B /* Pods_Dropper_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D0696014A397A79CA6D2BAEE156C5DE6 /* Pods-Dropper_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8485007D7CC9067FA4111376A24D2792 /* Build configuration list for PBXNativeTarget "Pods-Dropper_Example" */;
+			buildPhases = (
+				14B9CD03B7D850AB388CA35C313E34DC /* Sources */,
+				6092B193D55CF582E13735869A3B3008 /* Frameworks */,
+				1842901A61D920236C7919E63C7C4378 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4DCB135C5B60367EE6618F6EC101DB6 /* PBXTargetDependency */,
+			);
+			name = "Pods-Dropper_Example";
+			productName = "Pods-Dropper_Example";
+			productReference = 955B312E0809695B938A19A587E08D4E /* Pods_Dropper_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D6A5DF809507D35CDD5BA5F4B7AF4EA0 /* Dropper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8395B00B306F9D7C3128E6BB7F7BE74D /* Build configuration list for PBXNativeTarget "Dropper" */;
+			buildPhases = (
+				4444441BED9075245FBB02488D5E9825 /* Sources */,
+				600E8D2C5E0F5531A6ABCD1AF60BF72A /* Frameworks */,
+				4623F2E6C9181C718FF499DD7B8CA8AD /* Resources */,
+				26E7CE2880401A6044270F97EA472A93 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84DEF93EE6A637A5F90B5BD7A4E17111 /* PBXTargetDependency */,
+			);
+			name = Dropper;
+			productName = Dropper;
+			productReference = F8F9B93587BECC3E9A7A85A3E049B33D /* Dropper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6A5DF809507D35CDD5BA5F4B7AF4EA0 /* Dropper */,
+				5A6C833AB9B6769472605035B6C5C071 /* Dropper-Dropper */,
+				D0696014A397A79CA6D2BAEE156C5DE6 /* Pods-Dropper_Example */,
+				764B119200CA6DAC81C1ECFDBE48783B /* Pods-Dropper_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01BA96B0D2C4AD47566FEFA041ED6CE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4623F2E6C9181C718FF499DD7B8CA8AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FF6ED0C4466704500CB7E9941EF80A7 /* Dropper.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14B9CD03B7D850AB388CA35C313E34DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFE15E405267723F6FFB7B7B4BA73617 /* Pods-Dropper_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38F562D66CCF2BEC46C20EA795DE5A1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3475F40C2665935448B1D2ED060532F6 /* Pods-Dropper_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4444441BED9075245FBB02488D5E9825 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7D8485163CB87C045C1262EBB0005C6 /* Dropper-dummy.m in Sources */,
+				BA412380A8C894ADCD2582382694506B /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF485B7DA2402760F8F861F2A67EF20C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2746B923B9C3F9BC721430F6E7CFB596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Dropper;
+			target = D6A5DF809507D35CDD5BA5F4B7AF4EA0 /* Dropper */;
+			targetProxy = 3CC7146BB93A9913A17E05C35C299EF5 /* PBXContainerItemProxy */;
+		};
+		84DEF93EE6A637A5F90B5BD7A4E17111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Dropper-Dropper";
+			target = 5A6C833AB9B6769472605035B6C5C071 /* Dropper-Dropper */;
+			targetProxy = D6B9DD4B0880A6ABE88E079C3718E3F8 /* PBXContainerItemProxy */;
+		};
+		A4DCB135C5B60367EE6618F6EC101DB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Dropper;
+			target = D6A5DF809507D35CDD5BA5F4B7AF4EA0 /* Dropper */;
+			targetProxy = B569FB1205280FDA0E53FC759BACCF3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		31BD5AAC37F2ADC919CC14451A385F49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC368D50E49C5605C9AF33390894EBBD /* Dropper-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = Dropper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		38418AE1DB2EA326FE0166B552B12ABD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABCFEBF2698FC16623F64C38D26819C7 /* Pods-Dropper_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Dropper_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Dropper_Example/Pods-Dropper_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Dropper_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		42A262813841E422201E3AA79E7A9706 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC368D50E49C5605C9AF33390894EBBD /* Dropper-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Dropper/Dropper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Dropper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Dropper/Dropper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Dropper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4E1216A2AF04C0B8FC432BA682B5A392 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 516FA4EA2D3331399EAA2BFFD6BA6298 /* Pods-Dropper_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Dropper_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Dropper_Tests/Pods-Dropper_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Dropper_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CAB3450CBC67365516872D82B7EF037A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC368D50E49C5605C9AF33390894EBBD /* Dropper-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Dropper/Dropper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Dropper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Dropper/Dropper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Dropper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CFAD7AEB7198C830E160A4BE25A19EA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC368D50E49C5605C9AF33390894EBBD /* Dropper-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = Dropper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		EF6D63C31C2119A17EDEC7AFBA833BCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B0D2BE7557890D8864C37700EA581D7 /* Pods-Dropper_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Dropper_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Dropper_Example/Pods-Dropper_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Dropper_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB3A0ABD2385EA97B1478845E87AE435 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB5D80FD75E0B4C459B72AAE475C3438 /* Pods-Dropper_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Dropper_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Dropper_Tests/Pods-Dropper_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Dropper_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30AFC2A744CDD6EC8E784FFC618F0565 /* Build configuration list for PBXNativeTarget "Pods-Dropper_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB3A0ABD2385EA97B1478845E87AE435 /* Debug */,
+				4E1216A2AF04C0B8FC432BA682B5A392 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8395B00B306F9D7C3128E6BB7F7BE74D /* Build configuration list for PBXNativeTarget "Dropper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAB3450CBC67365516872D82B7EF037A /* Debug */,
+				42A262813841E422201E3AA79E7A9706 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8485007D7CC9067FA4111376A24D2792 /* Build configuration list for PBXNativeTarget "Pods-Dropper_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF6D63C31C2119A17EDEC7AFBA833BCA /* Debug */,
+				38418AE1DB2EA326FE0166B552B12ABD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3CF13FA8CEEC1BDD751AD94EE372FCA /* Build configuration list for PBXNativeTarget "Dropper-Dropper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFAD7AEB7198C830E160A4BE25A19EA4 /* Debug */,
+				31BD5AAC37F2ADC919CC14451A385F49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,14 @@
+PODS:
+  - Dropper (0.1.0)
+
+DEPENDENCIES:
+  - Dropper (from `../`)
+
+EXTERNAL SOURCES:
+  Dropper:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Dropper: 04e66493183dc137a7cfd15bceeb0276a4d8cdd1
+
+COCOAPODS: 0.38.2

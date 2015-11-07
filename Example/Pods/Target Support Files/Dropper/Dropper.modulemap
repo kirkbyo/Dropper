@@ -1,0 +1,6 @@
+framework module Dropper {
+  umbrella header "Dropper-umbrella.h"
+
+  export *
+  module * { export * }
+}
