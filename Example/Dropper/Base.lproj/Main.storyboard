@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,8 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Row: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXT-lx-pTs">
+                                <rect key="frame" x="16" y="77" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="DMx-zd-0Oo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfM-Th-3l0">
-                                <rect key="frame" x="143" y="106" width="34" height="30"/>
+                                <rect key="frame" x="143" y="119" width="34" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5ye-PP-KzD"/>
                                     <constraint firstAttribute="width" constant="34" id="RZd-Wq-8hD"/>
@@ -31,17 +41,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MfM-Th-3l0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="86" id="lez-Ri-p7i"/>
+                            <constraint firstItem="IXT-lx-pTs" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="816-Ka-9s5"/>
+                            <constraint firstItem="IXT-lx-pTs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Ua7-kI-dFI"/>
+                            <constraint firstItem="IXT-lx-pTs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="57" id="ZqX-Oj-ali"/>
+                            <constraint firstItem="MfM-Th-3l0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="99" id="lez-Ri-p7i"/>
                             <constraint firstItem="MfM-Th-3l0" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="qIb-dC-okb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dropdown" destination="MfM-Th-3l0" id="zaP-Td-iCV"/>
+                        <outlet property="selectedLabel" destination="IXT-lx-pTs" id="eoi-Ih-8L6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="202.66666666666666" y="274.06"/>
+            <point key="canvasLocation" x="202" y="274"/>
         </scene>
     </scenes>
 </document>
