@@ -1,8 +1,5 @@
 # Dropper
-<p align="center"><img src="https://raw.githubusercontent.com/kirkbyo/Dropper/master/Pod/Assets/Logo.png" alt="Outflow app icon"/></p>
-[![Version](https://img.shields.io/cocoapods/v/Dropper.svg?style=flat)](http://cocoapods.org/pods/Dropper)
-[![License](https://img.shields.io/cocoapods/l/Dropper.svg?style=flat)](http://cocoapods.org/pods/Dropper)
-[![Platform](https://img.shields.io/cocoapods/p/Dropper.svg?style=flat)](http://cocoapods.org/pods/Dropper)
+Dropper is a simple Dropdown menu for iOS. Built with customizability in mind and is flexible on how it can be used. Also, it is easy to setup and use in your projects. If you are looking for some complex dropdown menu, this is not for you. This was more built to be used as an accessory to a view. For example being able to change your currency in a shopping cart app. 
 
 ## Installation
 
@@ -112,3 +109,5 @@ dropper.theme = Dropper.Themes.Black(UIColor.blackColor()) // Uses default dark 
 ## License
 
 Dropper is available under the MIT license. See the LICENSE file for more info.
+
+Built by [Ozzie Kirkby](http://kirkbyo.com/), if you have any question feel free to contact. [Twitter](https://twitter.com/kirkbyo_)
