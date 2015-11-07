@@ -9,8 +9,6 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
 ## Installation
 
 Dropper is available through [CocoaPods](http://cocoapods.org). To install
@@ -20,9 +18,6 @@ it, simply add the following line to your Podfile:
 pod "Dropper"
 ```
 
-## Author
-
-kirkbyo, ozzie@kirkbyo.com
 
 ## License
 
