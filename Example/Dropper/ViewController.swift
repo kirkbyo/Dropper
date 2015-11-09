@@ -12,6 +12,9 @@ import Dropper
 class ViewController: UIViewController {
     let dropper = Dropper(width: 75, height: 200)
     @IBOutlet var dropdown: UIButton!
+    
+    @IBOutlet weak var shortDropdown: UIButton!
+    
     @IBOutlet weak var selectedLabel: UILabel!
     
     override func viewDidLoad() {
@@ -26,11 +29,23 @@ class ViewController: UIViewController {
 
     @IBAction func DropdownAction() {
         if dropper.status == .Hidden {
-            dropper.items = ["Item 1", "Item 2", "circle.png", "Item 3", "Item 4", "Item 5"]
+            dropper.items = ["Item 1", "Item 2", "circle.png", "Item 3", "Item 4", "Item 5","Item 1", "Item 2", "circle.png", "Item 3", "Item 4", "Item 5","Item 1", "Item 2", "circle.png", "Item 3", "Item 4", "Item 5","Item 1", "Item 2", "circle.png", "Item 3", "Item 4", "Item 5","Item 1", "Item 2", "circle.png", "Item 3", "Item 4", "Item 5","Item 1", "Item 2", "circle.png", "Item 3", "Item 4", "Item 5"]
             dropper.theme = Dropper.Themes.White
             dropper.delegate = self
             dropper.cornerRadius = 3
             dropper.showWithAnimation(0.15, options: Dropper.Alignment.Center, button: dropdown)
+        } else {
+            dropper.hideWithAnimation(0.1)
+        }
+    }
+    
+    @IBAction func ShortDropdownAction() {
+        if dropper.status == .Hidden {
+            dropper.items = ["Larger, Longer, Item 1"]
+            dropper.theme = Dropper.Themes.White
+            dropper.delegate = self
+            dropper.cornerRadius = 3
+            dropper.showWithAnimation(0.15, options: Dropper.Alignment.Center, button: shortDropdown)
         } else {
             dropper.hideWithAnimation(0.1)
         }

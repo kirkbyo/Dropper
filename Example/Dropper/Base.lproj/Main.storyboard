@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -20,6 +20,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Row: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXT-lx-pTs">
                                 <rect key="frame" x="16" y="77" width="288" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="DMx-zd-0Oo"/>
                                 </constraints>
@@ -29,6 +30,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfM-Th-3l0">
                                 <rect key="frame" x="143" y="119" width="34" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5ye-PP-KzD"/>
                                     <constraint firstAttribute="width" constant="34" id="RZd-Wq-8hD"/>
@@ -38,19 +40,30 @@
                                     <action selector="DropdownAction" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hqc-jM-xSC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="center" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggP-1Y-5rR">
+                                <rect key="frame" x="42" y="229" width="76" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Short Drop"/>
+                                <connections>
+                                    <action selector="ShortDropdownAction" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RnL-qY-Sj3"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IXT-lx-pTs" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="816-Ka-9s5"/>
                             <constraint firstItem="IXT-lx-pTs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Ua7-kI-dFI"/>
                             <constraint firstItem="IXT-lx-pTs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="57" id="ZqX-Oj-ali"/>
                             <constraint firstItem="MfM-Th-3l0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="99" id="lez-Ri-p7i"/>
+                            <constraint firstItem="ggP-1Y-5rR" firstAttribute="top" secondItem="MfM-Th-3l0" secondAttribute="bottom" constant="79" id="mwC-HN-5Es"/>
                             <constraint firstItem="MfM-Th-3l0" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="qIb-dC-okb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dropdown" destination="MfM-Th-3l0" id="zaP-Td-iCV"/>
                         <outlet property="selectedLabel" destination="IXT-lx-pTs" id="eoi-Ih-8L6"/>
+                        <outlet property="shortDropdown" destination="ggP-1Y-5rR" id="wLG-Ci-9kA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
