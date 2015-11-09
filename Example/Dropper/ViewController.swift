@@ -18,6 +18,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var selectedLabel: UILabel!
     
     override func viewDidLoad() {
+        
+//        uncomment to test when maxHeight has been set
+//        dropper.maxHeight = 200
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
