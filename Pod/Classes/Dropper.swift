@@ -128,9 +128,16 @@ public class Dropper: UIView {
             if let height = maxHeight { // Determines if max_height is provided
                 return height
             }
-            return self.frame.height - self.frame.origin.x // If not returns value that will fit inside view height
+
+            if let containingView = self.superview { // restrict to containing views height
+                return containingView.frame.size.height - self.frame.origin.y
+            }
+            
+            return self.frame.size.height // catch all returns the current height
         }
-        set { maxHeight = newValue }
+        set {
+            maxHeight = newValue
+        }
     }
     
     /// Gets the current root view of where the dropdown is
@@ -221,6 +228,8 @@ public class Dropper: UIView {
             self.hidden = false
         }
         status = .Displayed
+        
+        refreshHeight()
     }
     
     /**
@@ -233,9 +242,9 @@ public class Dropper: UIView {
     public func showWithAnimation(time: NSTimeInterval, options: Alignment, button: UIButton) {
         if (self.hidden) {
             refresh()
-            refreshHeight()
             height = self.TableMenu.frame.height
         }
+        
         self.TableMenu.alpha = 0.0
         self.show(options, button: button)
         UIView.animateWithDuration(time, animations: {
