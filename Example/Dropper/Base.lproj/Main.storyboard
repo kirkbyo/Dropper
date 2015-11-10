@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -25,27 +25,31 @@
                                     <constraint firstAttribute="height" constant="21" id="DMx-zd-0Oo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfM-Th-3l0">
-                                <rect key="frame" x="143" y="119" width="34" height="30"/>
+                                <rect key="frame" x="124" y="119" width="72" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5ye-PP-KzD"/>
-                                    <constraint firstAttribute="width" constant="34" id="RZd-Wq-8hD"/>
+                                    <constraint firstAttribute="width" constant="72" id="RZd-Wq-8hD"/>
                                 </constraints>
-                                <state key="normal" title="Drop"/>
+                                <state key="normal" title="Light Drop"/>
                                 <connections>
                                     <action selector="DropdownAction" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Hqc-jM-xSC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggP-1Y-5rR">
-                                <rect key="frame" x="42" y="229" width="76" height="30"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggP-1Y-5rR">
+                                <rect key="frame" x="125" y="189" width="70" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Short Drop"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ej6-LZ-YIG"/>
+                                    <constraint firstAttribute="width" constant="70" id="on1-3l-KKO"/>
+                                </constraints>
+                                <state key="normal" title="Dark Drop"/>
                                 <connections>
-                                    <action selector="ShortDropdownAction" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RnL-qY-Sj3"/>
+                                    <action selector="DarkDropdown" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fvY-ZV-FvT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -56,14 +60,15 @@
                             <constraint firstItem="IXT-lx-pTs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Ua7-kI-dFI"/>
                             <constraint firstItem="IXT-lx-pTs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="57" id="ZqX-Oj-ali"/>
                             <constraint firstItem="MfM-Th-3l0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="99" id="lez-Ri-p7i"/>
-                            <constraint firstItem="ggP-1Y-5rR" firstAttribute="top" secondItem="MfM-Th-3l0" secondAttribute="bottom" constant="79" id="mwC-HN-5Es"/>
+                            <constraint firstItem="ggP-1Y-5rR" firstAttribute="top" secondItem="MfM-Th-3l0" secondAttribute="bottom" constant="40" id="lhu-8g-GdX"/>
                             <constraint firstItem="MfM-Th-3l0" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="qIb-dC-okb"/>
+                            <constraint firstItem="ggP-1Y-5rR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="xRq-Lr-xSY"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="darkDropdown" destination="ggP-1Y-5rR" id="tw6-CQ-A8q"/>
                         <outlet property="dropdown" destination="MfM-Th-3l0" id="zaP-Td-iCV"/>
                         <outlet property="selectedLabel" destination="IXT-lx-pTs" id="eoi-Ih-8L6"/>
-                        <outlet property="shortDropdown" destination="ggP-1Y-5rR" id="wLG-Ci-9kA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
