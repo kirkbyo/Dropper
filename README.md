@@ -106,7 +106,7 @@ Hides the Dropdown menu with an fade out animation
 ```Swift
 dropper.theme = Dropper.Themes.Black(nil) // Uses default dark color
 // OR
-dropper.theme = Dropper.Themes.Black(UIColor.blackColor()) // Uses default dark color
+dropper.theme = Dropper.Themes.Black(UIColor.blackColor()) // Uses Black UIColor
 ```
 - `border` *(width: CGFloat, color: UIColor)*: Specify the border width and the color of the Dropper
 - `refresh()`: Refresh the Dropper. For specifically calling .reloadData() on the Table View
