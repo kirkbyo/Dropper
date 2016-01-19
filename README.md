@@ -109,6 +109,10 @@ dropper.theme = Dropper.Themes.Black(nil) // Uses default dark color
 dropper.theme = Dropper.Themes.Black(UIColor.blackColor()) // Uses Black UIColor
 ```
 - `border` *(width: CGFloat, color: UIColor)*: Specify the border width and the color of the Dropper
+```Swift
+dropper.border = (width: 2, color: UIColor.blueColor())
+```
+
 - `refresh()`: Refresh the Dropper. For specifically calling .reloadData() on the Table View
 
 ## License
