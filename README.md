@@ -68,14 +68,23 @@ class ViewController: UIViewController {
 
 #### Show
 Shows the Dropdown Menu
-- `show(options: Alignment, button: UIButton)`
-  - options *Dropper.Alignment*: Position of the dropdown corresponding of the button (Left, Center, Right)
+- `show(options: Alignment, position: Position = .Bottom, button: UIButton)`
+  - options *Dropper.Alignment*: Vertical position of the dropdown corresponding of the button (Left, Center, Right)
+  - position *Dropper.Position*: Horizontal alignment of the dropdown. Defaults to under the button.
   - button *UIButton*: Button that button will be position relative too
 Shows the Dropdown menu with a fade animation
-- `showWithAnimation(time: NSTimeInterval, options: Alignment, button: UIButton)`
+- `showWithAnimation(time: NSTimeInterval, options: Alignment, position: Position = .Bottom, button: UIButton)`
   - time *NSTimeInterval*: Time taken for the fade animation
   - options *Dropper.Alignment*: Position of the dropdown corresponding of the button (Left, Center, Right)
+  - position *Dropper.Position*: Horizontal alignment of the dropdown. Defaults to under the button.
   - button *UIButton*: Button that button will be position relative too
+
+```Swift
+// Dropdown displayed on top of the button
+dropper.showWithAnimation(0.15, options: Dropper.Alignment.Center, position: .Top, button: button)
+// Dropdown displayed under the button
+dropper.showWithAnimation(0.15, options: Dropper.Alignment.Center, button: button)
+```
 
 #### Hide
 Hides the Dropdown Menu

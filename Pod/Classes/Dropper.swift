@@ -28,6 +28,16 @@ public class Dropper: UIView {
     }
     
     /**
+     Position of the dropdown, relative to the top or bottom of the button
+     
+     - Top:    Displayed on the top of the dropdown
+     - Bottom: Displayed on bottom of the dropdown
+     */
+    public enum Position {
+        case Top, Bottom
+    }
+    
+    /**
     The current status of the dropdowns state
     
     - Displayed: The dropdown is visible on screen
@@ -201,16 +211,30 @@ public class Dropper: UIView {
     - parameter button: Button to which the dropdown will be aligned to
     
     */
-    public func show(options: Alignment, button: UIButton) {
-        switch options {
+    
+    /**
+    Displays the dropdown
+    
+    - parameter options:  Vertical alignment of the dropdown corresponding of the button
+    - parameter position: Horizontal alignment of the dropdown. Defaults to bottom.
+    - parameter button:   Button to which the dropdown will be aligned to
+    */
+    public func show(options: Alignment, position: Position = .Bottom, button: UIButton) {
+        refreshHeight()
+    
+        switch options { // Aligns the view vertically to the button
         case .Left:
             self.frame.origin.x = button.frame.origin.x
-            self.frame.origin.y = button.frame.origin.y + button.frame.size.height + spacing
         case .Right:
             self.frame.origin.x = button.frame.origin.x + button.frame.width
-            self.frame.origin.y = button.frame.origin.y + button.frame.height + spacing
         case .Center:
             self.frame.origin.x = button.frame.origin.x + (button.frame.width - self.frame.width)/2
+        }
+        
+        switch position { // Aligns the view Horizontally to the button
+        case .Top:
+            self.frame.origin.y = button.frame.origin.y - height - spacing
+        case .Bottom:
             self.frame.origin.y = button.frame.origin.y + button.frame.height + spacing
         }
     
@@ -228,8 +252,6 @@ public class Dropper: UIView {
             self.hidden = false
         }
         status = .Displayed
-        
-        refreshHeight()
     }
     
     /**
@@ -239,14 +261,14 @@ public class Dropper: UIView {
     - parameter options: Position of the dropdown corresponding of the button
     - parameter button:  Button to which the dropdown will be aligned to
     */
-    public func showWithAnimation(time: NSTimeInterval, options: Alignment, button: UIButton) {
+    public func showWithAnimation(time: NSTimeInterval, options: Alignment, position: Position = .Bottom, button: UIButton) {
         if (self.hidden) {
             refresh()
             height = self.TableMenu.frame.height
         }
         
         self.TableMenu.alpha = 0.0
-        self.show(options, button: button)
+        self.show(options, position:  position, button: button)
         UIView.animateWithDuration(time, animations: {
             self.TableMenu.alpha = 1.0
         })
