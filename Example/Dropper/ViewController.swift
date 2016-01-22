@@ -48,6 +48,12 @@ class ViewController: UIViewController {
             dropper.hideWithAnimation(0.1)
         }
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if (dropper.hidden == false) { // Checks if Dropper is visible
+            dropper.hideWithAnimation(0.1) // Hides Dropper
+        }
+    }
 }
 
 extension ViewController: DropperDelegate {
