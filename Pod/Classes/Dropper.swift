@@ -8,10 +8,6 @@
 
 import UIKit
 
-public protocol DropperDelegate {
-    func DropperSelectedRow(path: NSIndexPath, contents: String)
-}
-
 public class Dropper: UIView {
     public let TableMenu: UITableView = UITableView()
     /**
@@ -382,6 +378,7 @@ extension Dropper: UITableViewDelegate, UITableViewDataSource, DropperExtentsion
     
     public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         delegate?.DropperSelectedRow(indexPath, contents: items[indexPath.row])
+        delegate?.DropperSelectedRow(indexPath, contents: items[indexPath.row], tag: self.tag)
         self.hideWithAnimation(defaultAnimationTime)
     }
 }

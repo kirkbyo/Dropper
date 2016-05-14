@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             dropper.theme = Dropper.Themes.White
             dropper.delegate = self
             dropper.cornerRadius = 3
-            dropper.showWithAnimation(0.15, options: Dropper.Alignment.Center, button: dropdown)
+            dropper.showWithAnimation(0.15, options: .Center, position: .Top, button: dropdown)
         } else {
             dropper.hideWithAnimation(0.1)
         }
