@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Dropper"
-  s.version          = "2.5"
+  s.version          = "2.6"
   s.summary          = "Customizable Swift Dropdown Menu "
 
 # This description is used to generate tags and improve search results.
@@ -31,9 +31,9 @@ Highly customizable Swift Dropdown Menu. Easy to use and to set up.
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'Dropper' => ['Pod/Assets/*.png']
-  }
+# s.resource_bundles = {
+#'Dropper' => ['Pod/Assets/*.png']
+#}
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
