@@ -1,12 +1,14 @@
 source 'https://github.com/CocoaPods/Specs.git'
+inhibit_all_warnings!
+xcodeproj 'Dropper'
 use_frameworks!
 
-target 'Dropper_Example', :exclusive => true do
+
+
+target 'Dropper_Example' do
   pod "Dropper", :path => "../"
 end
 
-target 'Dropper_Tests', :exclusive => true do
+target 'Dropper_Tests' do
   pod "Dropper", :path => "../"
-
-  
 end
