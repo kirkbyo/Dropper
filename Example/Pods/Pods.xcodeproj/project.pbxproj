@@ -376,6 +376,9 @@
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0800;
 				TargetAttributes = {
+					5A6C833AB9B6769472605035B6C5C071 = {
+						LastSwiftMigration = 0800;
+					};
 					764B119200CA6DAC81C1ECFDBE48783B = {
 						LastSwiftMigration = 0800;
 					};
@@ -540,6 +543,7 @@
 				PRODUCT_NAME = Dropper;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
@@ -721,6 +725,7 @@
 				PRODUCT_NAME = Dropper;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
