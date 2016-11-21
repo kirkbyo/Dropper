@@ -9,11 +9,11 @@
 import Foundation
 
 public protocol DropperDelegate {
-    func DropperSelectedRow(path: NSIndexPath, contents: String)
-    func DropperSelectedRow(path: NSIndexPath, contents: String, tag: Int)
+    func DropperSelectedRow(_ path: IndexPath, contents: String)
+    func DropperSelectedRow(_ path: IndexPath, contents: String, tag: Int)
 }
 
 public extension DropperDelegate {
-    func DropperSelectedRow(path: NSIndexPath, contents: String) {}
-    func DropperSelectedRow(path: NSIndexPath, contents: String, tag: Int) {}
+    func DropperSelectedRow(_ path: IndexPath, contents: String) {}
+    func DropperSelectedRow(_ path: IndexPath, contents: String, tag: Int) {}
 }

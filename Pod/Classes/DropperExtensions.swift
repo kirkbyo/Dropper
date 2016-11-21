@@ -9,7 +9,7 @@
 import UIKit
 
 internal protocol DropperExtentsions {
-    func toImage(name: String) -> UIImage?
+    func toImage(_ name: String) -> UIImage?
 }
 
 internal extension DropperExtentsions {
@@ -19,7 +19,7 @@ internal extension DropperExtentsions {
     @param: (name: String)
     @return: UIImage or Nil depending on if image is found
     */
-    internal func toImage(name: String) -> UIImage? {
+    internal func toImage(_ name: String) -> UIImage? {
         if let image = UIImage(named: name) {
             return image
         }
