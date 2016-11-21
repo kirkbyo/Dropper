@@ -55,16 +55,31 @@ public class Dropper: UIView {
     }
     
     // MARK: - Public Properties
-    public var trimCorners: Bool = false /// Automaticly applies border radius of 10 to Dropdown
-    public var defaultAnimationTime: NSTimeInterval = 0.1 /// The default time for animations to take
-    public var delegate: DropperDelegate? /// Delegate Property
-    public var status: Status = .Hidden /// The current state of the view
-    public var spacing: CGFloat = 10 /// The distance from the button to the dropdown
-    public var maxHeight: CGFloat? /// The maximum possible height of the dropdown
-    public var cellBackgroundColor: UIColor? /// Sets the cell background color
-    public var cellColor: UIColor? /// Sets the cell tint color and text color
-    public var cellTextSize: CGFloat? /// Sets the size of the text to provided value
-    
+    /// Automaticly applies a corner radius of 10 to each corner of the dropdown
+    public var trimCorners: Bool = false
+    /// The default time for animations to take
+    public var defaultAnimationTime: NSTimeInterval = 0.1
+    /// Delegate Property
+    public var delegate: DropperDelegate?
+    /// The current state of the view
+    public var status: Status = .Hidden
+    /// The distance from the button to the dropdown
+    public var spacing: CGFloat = 10
+    /// The maximum possible height of the dropdown
+    public var maxHeight: CGFloat?
+    /// Sets the cell background color
+    public var cellBackgroundColor: UIColor?
+    /// Sets the cell tint color and text color
+    @available(*, deprecated=3.0, message="[Dropper]: border will be deprecated in Dropper 4.0, use cellCustomizations.border instead.")
+    public var cellColor: UIColor?
+    /// Sets the size of the text to provided value
+    public var cellTextSize: CGFloat?
+    /// View will size it's height in order for there is no scroll, (if screenspace allows)
+    public var automaticHeightSizing: Bool = true
+    /// Selected Cells
+    public var selectedCells: [NSIndexPath] = [NSIndexPath]()
+    /// Customization points for the cell
+    public var customizedCell: DropperCellCustomizations = DropperCellCustomizations()
     // MARK: - Public Computed Properties
     /// The items to be dispalyed in the tableview
     public var items = [String]() {
@@ -89,8 +104,8 @@ public class Dropper: UIView {
     public var cornerRadius: CGFloat {
         get { return self.layer.cornerRadius }
         set {
-            TableMenu.layer.cornerRadius = newValue
-            TableMenu.clipsToBounds = true
+            self.layer.cornerRadius = newValue
+            self.clipsToBounds = true
         }
     }
     
@@ -156,9 +171,8 @@ public class Dropper: UIView {
     }
     
     // MARK: - Layout & Setup
-    override public func layoutSubviews() {
-        super.layoutSubviews()
-        // Size of table menu
+    public override func drawRect(rect: CGRect) {
+        super.drawRect(rect)
         TableMenu.frame.size.height = self.frame.size.height + 0.1
         TableMenu.frame.size.width = self.frame.size.width + 0.1
         // Delegates and data Source
@@ -173,6 +187,12 @@ public class Dropper: UIView {
             TableMenu.layer.cornerRadius = 9.0
             TableMenu.clipsToBounds = true
         }
+        
+        TableMenu.rowHeight = 50
+        TableMenu.layer.borderColor = UIColor.lightGrayColor().CGColor
+        TableMenu.layer.borderWidth = 1
+        
+        self.tag = 2038 // Year + Month + Day of Birthday. Used to distinguish the dropper from the rest of the views
     }
     
     // MARK: - Private Properties
@@ -182,12 +202,10 @@ public class Dropper: UIView {
     // MARK: - Init
     public init(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
         super.init(frame: CGRect(x: x, y: y, width: width, height: height))
-        TableMenu.rowHeight = 50
-        TableMenu.layer.borderColor = UIColor.lightGrayColor().CGColor
-        TableMenu.layer.borderWidth = 1
-        self.superview?.addSubview(self)
-        
-        self.tag = 2038 // Year + Month + Day of Birthday. Used to distinguish the dropper from the rest of the views
+    }
+    
+    public convenience init(automaticHeightSizing: Bool, width: CGFloat) {
+        self.init(x: 0, y: 0, width: width, height: 10)
     }
     
     convenience public init(width: CGFloat, height: CGFloat) {
@@ -203,20 +221,14 @@ public class Dropper: UIView {
     /**
     Displays the dropdown
     
-    - parameter options: Position of the dropdown corresponding of the button
-    - parameter button: Button to which the dropdown will be aligned to
-    
-    */
-    
-    /**
-    Displays the dropdown
-    
     - parameter options:  Vertical alignment of the dropdown corresponding of the button
     - parameter position: Horizontal alignment of the dropdown. Defaults to bottom.
     - parameter button:   Button to which the dropdown will be aligned to
     */
     public func show(options: Alignment, position: Position = .Bottom, button: UIButton) {
-        refreshHeight()
+        if automaticHeightSizing {
+            refreshHeight()
+        }
     
         switch options { // Aligns the view vertically to the button
         case .Left:
@@ -233,7 +245,7 @@ public class Dropper: UIView {
         case .Bottom:
             self.frame.origin.y = button.frame.origin.y + button.frame.height + spacing
         }
-    
+        
         if (!self.hidden) {
             self.addSubview(TableMenu)
             if let buttonRoot = findButtonFromSubviews((button.superview?.subviews)!, button: button) {
@@ -247,6 +259,7 @@ public class Dropper: UIView {
             self.TableMenu.hidden = false
             self.hidden = false
         }
+        
         status = .Displayed
     }
     
@@ -304,7 +317,7 @@ public class Dropper: UIView {
     /**
     Refreshes the table view height
     */
-    private func refreshHeight() {
+    public func refreshHeight() {
         // Updates the height of the view depending on the amount of item
         let tempHeight: CGFloat = CGFloat(items.count) * TableMenu.rowHeight // Height of TableView
         if (tempHeight <= max_Height) { // Determines if tempHeight is greater then max height
@@ -336,14 +349,12 @@ extension Dropper: UITableViewDelegate, UITableViewDataSource, DropperExtentsion
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! DropperCell
         // Sets up Cell
-        // Removes image and text just in case the cell still contains the view
-        cell.imageItem.removeFromSuperview()
-        cell.textItem.removeFromSuperview()
         cell.last = items.count - 1  // Sets the last item to the cell
         cell.indexPath = indexPath // Sets index path to the cell
-        cell.borderColor = border.color // Sets the border color for the seperator
+        
         let item = items[indexPath.row]
         
+        // *** Code will depreciated in 4.0 ** //
         if let color = cellBackgroundColor {
             cell.backgroundColor = color
         }
@@ -351,7 +362,12 @@ extension Dropper: UITableViewDelegate, UITableViewDataSource, DropperExtentsion
         if let color = cellColor {
             cell.textItem.textColor = color
             cell.imageItem.tintColor = color
+            customizedCell.label.textColor = color
+            customizedCell.image.tintColor = color
         }
+        // ---- //
+        
+        cell.customize = self.customizedCell
         
         if let size = cellTextSize {
             cell.textItem.font = UIFont.systemFontOfSize(size)
@@ -363,6 +379,10 @@ extension Dropper: UITableViewDelegate, UITableViewDataSource, DropperExtentsion
         } else {
             cell.cellType = .Text
             cell.textItem.text = item
+        }
+        
+        if selectedCells.contains(indexPath) {
+            cell.selected = true
         }
         
         return cell

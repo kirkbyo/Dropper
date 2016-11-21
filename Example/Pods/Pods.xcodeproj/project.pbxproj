@@ -28,6 +28,9 @@
 		D9739A6D1BED91740008DF41 /* DropperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9739A661BED91740008DF41 /* DropperExtensions.swift */; };
 		D9739A6E1BED91740008DF41 /* DropperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9739A661BED91740008DF41 /* DropperExtensions.swift */; };
 		D9739A6F1BED91740008DF41 /* DropperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9739A661BED91740008DF41 /* DropperExtensions.swift */; };
+		D9E5A85B1D417015008234C0 /* DropperCellCustomizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E5A85A1D417015008234C0 /* DropperCellCustomizations.swift */; };
+		D9E5A85C1D4186C1008234C0 /* DropperCellCustomizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E5A85A1D417015008234C0 /* DropperCellCustomizations.swift */; };
+		D9E5A85D1D4186C1008234C0 /* DropperCellCustomizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E5A85A1D417015008234C0 /* DropperCellCustomizations.swift */; };
 		E4A0D0D735A5EC0369773030208E3409 /* Pods-Dropper_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE817FB0C369C1BE0BBDF4A2F356CC4 /* Pods-Dropper_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -90,6 +93,7 @@
 		D9739A651BED91740008DF41 /* DropperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropperCell.swift; sourceTree = "<group>"; };
 		D9739A661BED91740008DF41 /* DropperExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropperExtensions.swift; sourceTree = "<group>"; };
 		D9B46365DD7585E8531F2CECA616C0F8 /* Dropper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Dropper-prefix.pch"; sourceTree = "<group>"; };
+		D9E5A85A1D417015008234C0 /* DropperCellCustomizations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropperCellCustomizations.swift; sourceTree = "<group>"; };
 		DA561E98D63340E2281FCB195B730DC9 /* Pods-Dropper_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Dropper_Example-resources.sh"; sourceTree = "<group>"; };
 		F8F9B93587BECC3E9A7A85A3E049B33D /* Dropper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dropper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB5D80FD75E0B4C459B72AAE475C3438 /* Pods-Dropper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Dropper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				D9739A641BED91740008DF41 /* Dropper.swift */,
+				D9E5A85A1D417015008234C0 /* DropperCellCustomizations.swift */,
 				D90F6A561CE76DE100F2429B /* DropperDelegate.swift */,
 				D9739A651BED91740008DF41 /* DropperCell.swift */,
 				D9739A661BED91740008DF41 /* DropperExtensions.swift */,
@@ -421,6 +426,7 @@
 			files = (
 				D9739A6B1BED91740008DF41 /* DropperCell.swift in Sources */,
 				D90F6A581CE76E2B00F2429B /* DropperDelegate.swift in Sources */,
+				D9E5A85C1D4186C1008234C0 /* DropperCellCustomizations.swift in Sources */,
 				D9739A681BED91740008DF41 /* Dropper.swift in Sources */,
 				D9739A6E1BED91740008DF41 /* DropperExtensions.swift in Sources */,
 				AFE15E405267723F6FFB7B7B4BA73617 /* Pods-Dropper_Example-dummy.m in Sources */,
@@ -433,6 +439,7 @@
 			files = (
 				D9739A6C1BED91740008DF41 /* DropperCell.swift in Sources */,
 				D90F6A591CE76E2C00F2429B /* DropperDelegate.swift in Sources */,
+				D9E5A85D1D4186C1008234C0 /* DropperCellCustomizations.swift in Sources */,
 				D9739A691BED91740008DF41 /* Dropper.swift in Sources */,
 				D9739A6F1BED91740008DF41 /* DropperExtensions.swift in Sources */,
 				3475F40C2665935448B1D2ED060532F6 /* Pods-Dropper_Tests-dummy.m in Sources */,
@@ -445,6 +452,7 @@
 			files = (
 				D9739A6A1BED91740008DF41 /* DropperCell.swift in Sources */,
 				D90F6A571CE76DE100F2429B /* DropperDelegate.swift in Sources */,
+				D9E5A85B1D417015008234C0 /* DropperCellCustomizations.swift in Sources */,
 				D9739A671BED91740008DF41 /* Dropper.swift in Sources */,
 				D9739A6D1BED91740008DF41 /* DropperExtensions.swift in Sources */,
 				B7D8485163CB87C045C1262EBB0005C6 /* Dropper-dummy.m in Sources */,

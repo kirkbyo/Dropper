@@ -10,7 +10,7 @@ import UIKit
 import Dropper
 
 class ViewController: UIViewController {
-    let dropper = Dropper(width: 75, height: 200)
+    let dropper = Dropper(width: 75, height: 5500)
     @IBOutlet var dropdown: UIButton!
     @IBOutlet weak var selectedLabel: UILabel!
     @IBOutlet weak var darkDropdown: UIButton!
@@ -31,7 +31,9 @@ class ViewController: UIViewController {
             dropper.theme = Dropper.Themes.White
             dropper.delegate = self
             dropper.cornerRadius = 3
-            dropper.showWithAnimation(0.15, options: .Center, position: .Top, button: dropdown)
+            dropper.border = (width: 4, color: UIColor.redColor())
+            dropper.selectedCells = [NSIndexPath(forRow: 0, inSection: 0)]
+            dropper.showWithAnimation(0.15, options: .Center, position: .Bottom, button: dropdown)
         } else {
             dropper.hideWithAnimation(0.1)
         }
@@ -39,7 +41,7 @@ class ViewController: UIViewController {
     
     @IBAction func DarkDropdown() {
         if dropper.status == .Hidden {
-            dropper.items = ["Larger, Longer, Item 1", "Item 2", "Item 3", "Item 4"]
+            dropper.items = ["Larger, Longer, Item 1, even longer", "Item 2", "Item 3", "Item 4"]
             dropper.theme = Dropper.Themes.Black(nil)
             dropper.delegate = self
             dropper.cornerRadius = 3

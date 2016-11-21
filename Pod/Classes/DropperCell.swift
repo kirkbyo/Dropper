@@ -18,31 +18,78 @@ internal class DropperCell: UITableViewCell {
     enum Options {
         case Icon, Text
     }
+    /// Theme of the cell
+    internal var theme: Dropper.Themes = .White {
+        didSet {
+            switch theme {
+            case .White:
+                customize = DropperCellCustomizations()
+            case .Black(let backgroundColor):
+                customize = DropperCellCustomizations()
+                if let backgroundColor = backgroundColor {
+                    customize.backgroundColor = backgroundColor
+                }
+                customize.backgroundColor = UIColor.blackColor()
+                customize.label.textColor = UIColor.whiteColor()
+                customize.image.tintColor = UIColor.whiteColor()
+            }
+        }
+    }
+     /// Default Cell type
+    internal var cellType: Options = .Text
+    /// Cell Image View
+    internal var imageItem: UIImageView = UIImageView()
+    /// Text item
+    internal var textItem: UILabel = UILabel()
+    // Last Item in array (Helps to determine weather or not to add another line)
+    internal var last: Int?
+    /// Index path of current cellForRow
+    internal var indexPath: NSIndexPath?
+    /// Border Color of custom Border
+    @available(iOS, deprecated=3.0, message="[Dropper]: border will be deprecated in Dropper 4.0, use cellCustomizations.seperator instead.")
+    internal var borderColor: UIColor?
+    /// Cell customization points
+    internal var customize: DropperCellCustomizations = DropperCellCustomizations()
+    /// Seperator of cells
+    private var seperator: UIView = UIView()
     
-    internal var cellType: Options = .Text /// Default Cell type
-    internal var imageItem: UIImageView = UIImageView() /// Cell Image View
-    internal var textItem: UILabel = UILabel() /// Text item
-    internal var last: Int? /// Last Item in array (Helps to determine weather or not to add another line)
-    internal var indexPath: NSIndexPath? /// Index path of current cellForRow
-    internal var borderColor: UIColor? /// Border Color of custom Border
-    private var seperator: UIView = UIView() /// Seperator of cells
-    
-    override func layoutSubviews() {
+    override func drawRect(rect: CGRect) {
+        super.drawRect(rect)
+        // Removes separator
         self.layoutMargins = UIEdgeInsetsZero
         self.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
         self.selectionStyle = UITableViewCellSelectionStyle.None
-        super.layoutSubviews()
+        self.backgroundColor = customize.backgroundColor
+        
+        // Lays out the cell depending if it's an image or text
         switch cellType {
         case .Icon:
             let height = self.frame.size.height - 20
-            imageItem.frame = CGRect(x: 0, y: (self.frame.height - height)/2, width: self.frame.width, height: height)
-            imageItem.contentMode = UIViewContentMode.ScaleAspectFit
+            self.imageItem.contentMode = customize.image.contentMode
+            self.imageItem.tintColor = self.customize.image.tintColor
+            if let image = customize.image.customImage {
+                self.imageItem = image
+            }
+            self.imageItem.frame = CGRect(x: 0, y: (self.frame.height - height)/2, width: self.frame.width, height: height)
+            
+            if (self.selected) {
+                imageItem.backgroundColor = self.customize.selectedItem.backgroundColor
+            }
+            
             addSubview(imageItem)
         case .Text:
-            textItem.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
-            textItem.textAlignment = .Center
-            textItem.adjustsFontSizeToFitWidth = true
+            textItem.layer.cornerRadius = self.customize.selectedItem.cornerRadius
+            textItem.clipsToBounds = self.customize.selectedItem.trimCorners
             textItem.numberOfLines = 0
+            textItem.adjustsFontSizeToFitWidth = self.customize.label.adjustsFontSizeToFitWidth
+            textItem.textAlignment = self.customize.label.alignment
+            if let image = customize.image.customImage {
+                self.imageItem = image
+            }
+            textItem.frame = CGRect(x: self.customize.selectedItem.boxPadding / 2, y: self.customize.selectedItem.boxPadding / 2, width: self.frame.width - self.customize.selectedItem.boxPadding, height: self.frame.height - self.customize.selectedItem.boxPadding)
+            if (self.selected) {
+                textItem.backgroundColor = self.customize.selectedItem.backgroundColor
+            }
             addSubview(textItem)
         }
         
@@ -50,10 +97,12 @@ internal class DropperCell: UITableViewCell {
     }
     
     private func addBottomBorder() {
+        guard customize.addSeparators == true else { return }
+        
         if let index = indexPath, lastItem = last {
             if (index.row != lastItem) {
-                seperator.frame = CGRect(x: 0, y: self.frame.height - 1, width: self.frame.width, height: 1)
-                seperator.backgroundColor = borderColor ?? UIColor.blackColor()
+                seperator.frame = CGRect(x: 0, y: self.frame.height - customize.separators.height, width: self.frame.width, height: customize.separators.height)
+                seperator.backgroundColor = self.customize.separators.color
                 addSubview(seperator)
             }
         }
