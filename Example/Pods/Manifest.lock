@@ -1,5 +1,5 @@
 PODS:
-  - Dropper (0.1.0)
+  - Dropper (2.7)
 
 DEPENDENCIES:
   - Dropper (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Dropper: 04e66493183dc137a7cfd15bceeb0276a4d8cdd1
+  Dropper: a1e0a5d5b2787663d251e1c74ca4e1c1b12b9703
 
-COCOAPODS: 0.38.2
+PODFILE CHECKSUM: 3e1618690e9d32af600a965c216b27f5f98a6bcc
+
+COCOAPODS: 1.0.1
