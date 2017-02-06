@@ -63,8 +63,21 @@ open class Dropper: UIView {
     open var maxHeight: CGFloat? /// The maximum possible height of the dropdown
     open var cellBackgroundColor: UIColor? /// Sets the cell background color
     open var cellColor: UIColor? /// Sets the cell tint color and text color
-    open var cellTextSize: CGFloat? /// Sets the size of the text to provided value
-    
+	open var cellTextSize: CGFloat? {
+		get {
+			return cellTextFont?.pointSize
+		}
+		set {
+			if let newValue = newValue {
+				cellTextFont = UIFont.systemFont(ofSize: newValue)
+			}else{
+				cellTextFont = nil
+			}
+		}
+	}/// Sets the size of the text to provided value
+	
+	open var cellTextFont: UIFont?
+	
     // MARK: - Public Computed Properties
     /// The items to be dispalyed in the tableview
     open var items = [String]() {
@@ -353,8 +366,8 @@ extension Dropper: UITableViewDelegate, UITableViewDataSource, DropperExtentsion
             cell.imageItem.tintColor = color
         }
         
-        if let size = cellTextSize {
-            cell.textItem.font = UIFont.systemFont(ofSize: size)
+        if let font = cellTextFont {
+            cell.textItem.font = font
         }
         
         if let image = toImage(item) { // Determines if item is an image or not
