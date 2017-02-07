@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         if dropper.status == .hidden {
             dropper.items = ["Larger, Longer, Item 1", "Item 2", "Item 3", "Item 4"]
             dropper.theme = Dropper.Themes.black(nil)
+			dropper.cellTextFont = UIFont.boldSystemFont(ofSize: 40)
             dropper.delegate = self
             dropper.cornerRadius = 3
             dropper.showWithAnimation(0.15, options: Dropper.Alignment.center, button: darkDropdown)
