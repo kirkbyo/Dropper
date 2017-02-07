@@ -74,8 +74,8 @@ open class Dropper: UIView {
 				cellTextFont = nil
 			}
 		}
-	}/// Sets the size of the text to provided value
-	
+	}
+    /// Sets the size of the text to provided value
 	open var cellTextFont: UIFont?
 	
     // MARK: - Public Computed Properties
