@@ -32,6 +32,7 @@ class ViewController: UIViewController {
             dropper.delegate = self
             dropper.cornerRadius = 3
             dropper.showWithAnimation(0.15, options: .center, position: .top, button: dropdown)
+            view.addSubview(dropper)
         } else {
             dropper.hideWithAnimation(0.1)
         }
